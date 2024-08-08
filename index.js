@@ -35,7 +35,7 @@ const checkOrderUrl = (req, res, next) => {
 // rota: pedidos, nome do cliente, valor do pedido
 app.post('/orders', checkOrderUrl, (req, res) => {
   const { order, clientName, price } = req.body // recebendo pelo body
-  console.log(res.body, req.body)
+  console.log(req.body)
   const status = "Em preparação:🍔🥤😋."
   const newOrder = { id: uuid.v4(), order, clientName, price, status }  // Montando um objeto
 
