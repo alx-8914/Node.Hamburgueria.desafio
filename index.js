@@ -1,10 +1,12 @@
 const express = require('express')
+const cors = require('cors');
 const uuid = require('uuid')
 
 const app = express()
 const port = 3000
 const orders = []
 app.use(express.json())
+app.use(cors())
 
 // Middleware para verificar ID do pedido
 const checkOrderId = (req, res, next) => {
